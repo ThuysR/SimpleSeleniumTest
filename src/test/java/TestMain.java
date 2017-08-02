@@ -1,10 +1,9 @@
-package test;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
 import support.SelenideSupportClass;
 
-public class MainTestPage extends SelenideSupportClass {
+public class TestMain extends SelenideSupportClass {
 
     @Test
     public void firstTest(){
