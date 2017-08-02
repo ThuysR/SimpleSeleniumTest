@@ -10,5 +10,6 @@ public class MainTestPage extends SelenideSupportClass {
     public void firstTest(){
         open("https://phptravels.org/clientarea.php");
         $(By.id("Primary_Navbar-Announcements")).click();
+        System.out.println();
     }
 }
