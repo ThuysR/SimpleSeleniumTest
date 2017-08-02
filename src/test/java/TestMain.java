@@ -1,14 +1,32 @@
+package chrome;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
-import support.SelenideSupportClass;
+import support.*;
 
-public class TestMain extends SelenideSupportClass {
+public class TestMain extends SelenideSupportClass{
 
-    @Test
-    public void firstTest(){
+    private static void walkthrough(){
+
         open("https://phptravels.org/clientarea.php");
         $(By.id("Primary_Navbar-Announcements")).click();
-        System.out.println();
+    }
+
+    @Test
+    public void firstTestChrome(){
+        SupportChrome.beforeClass();
+        walkthrough();
+    }
+
+    @Test
+    public void firstTestIe(){
+        SupportIE.beforeClass();
+        walkthrough();
+    }
+
+    @Test
+    public void firstTestMozilla(){
+        SupportMozzila.beforeClass();
+        walkthrough();
     }
 }
